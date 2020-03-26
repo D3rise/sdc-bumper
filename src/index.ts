@@ -96,6 +96,7 @@ async function bumpServer(
 ) {
   serverUpButton.click();
   console.log(`[BUMP] Tried to bump server #${index + 1}`);
+  setTimeout(setBumpTimeout.bind(this, [serverUpButton]), 5000); // wait for sdc to handle bumps
 }
 
 async function setBumpTimeout(serverButtons: ElementHandle<Element>[]) {
@@ -108,8 +109,12 @@ async function setBumpTimeout(serverButtons: ElementHandle<Element>[]) {
       ).jsonValue();
 
       const duration = moment.duration(timerText);
+      const additionalDuration = Math.floor(Math.random() * 60000) + 1; // for security, between 1 ms to 60 seconds
 
-      setTimeout(bumpServer.bind(this, button), duration.asMilliseconds());
+      setTimeout(
+        bumpServer.bind(this, button, i),
+        duration.asMilliseconds() + additionalDuration
+      );
       console.log(`[BUMP] Bump server #${i + 1} in ${timerText}`);
     }
   });
