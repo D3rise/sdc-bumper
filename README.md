@@ -1,13 +1,18 @@
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
+# Автоматический бампер для https://server-discord.com/
 
- Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+### **⚠ Внимание**
 
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
+Для использования этого скрипта вам нужно отключить 2FA на вашем аккаунте Discord (если он у вас установлен).  
+**Этот скрипт не ворует ваши данные. Ваш пароль и адрес электронной почты нужны только для того, чтобы скрипт смог авторизоваться на сайте.**
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+## Подготовка
 
-  0. You just DO WHAT THE FUCK YOU WANT TO.
+1. Для работы скрипта вам нужно установить [Node.js](https://nodejs.org/ru/)
+
+## Установка
+
+1. Откройте консоль в папке со скриптом
+2. Напишите следующую команду: `npm install`
+3. Переименуйте файл `.env.example` в `.env`
+4. Откройте файл `.env` и запишите ваши данные для аутентификации
+5. Откройте консоль и напишите `npm run start`

@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npm install -g typescript",
     "start": "tsc && node ."
   },
   "dependencies": {

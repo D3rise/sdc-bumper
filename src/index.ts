@@ -95,7 +95,7 @@ async function bumpServer(
   index: number
 ) {
   serverUpButton.click();
-  console.log(`[BUMP] Successfully bumped server #${index + 1}`);
+  console.log(`[BUMP] Tried to bump server #${index + 1}`);
 }
 
 async function setBumpTimeout(serverButtons: ElementHandle<Element>[]) {
