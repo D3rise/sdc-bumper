@@ -86,8 +86,6 @@ async function bumpServers(myServersPage: Page) {
   buttons.forEach(async (button, i) => {
     await bumpServer(button, i);
   });
-
-  setTimeout(setBumpTimeout.bind(this, buttons), 10000); // wait for sdc to handle bumps
 }
 
 async function bumpServer(
