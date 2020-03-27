@@ -50,7 +50,7 @@ async function login(page: Page) {
     // if not logged in
     if (!authorizeButton) {
       console.log("[LOAD] Not logged in to Discord, trying to log in...");
-      await page.waitFor(1000); // for low-end systems
+      await page.waitFor(4000); // for low-end systems
 
       const emailField = await page.$("[type='email']");
       const passwordField = await page.$("[type='password']");
